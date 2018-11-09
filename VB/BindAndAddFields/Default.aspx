@@ -1,6 +1,6 @@
 <%@ Page Language="vb" AutoEventWireup="true" CodeBehind="Default.aspx.vb" Inherits="BindAndAddFields._Default" %>
 
-<%@ Register Assembly="DevExpress.Web.ASPxPivotGrid.v8.2, Version=8.2.2.0, Culture=neutral, PublicKeyToken=9B171C9FD64DA1D1"
+<%@ Register Assembly="DevExpress.Web.ASPxPivotGrid.v13.1, Version=13.1.4.0, Culture=neutral, PublicKeyToken=B88D1754D700E49A"
 	Namespace="DevExpress.Web.ASPxPivotGrid" TagPrefix="dxwpg" %>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
