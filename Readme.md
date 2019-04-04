@@ -2,7 +2,7 @@
 *Files to look at*:
 
 * [Default.aspx](./CS/BindAndAddFields/Default.aspx) (VB: [Default.aspx](./VB/BindAndAddFields/Default.aspx))
-* [Default.aspx.cs](./CS/BindAndAddFields/Default.aspx.cs) (VB: [Default.aspx](./VB/BindAndAddFields/Default.aspx))
+* [Default.aspx.cs](./CS/BindAndAddFields/Default.aspx.cs) (VB: [Default.aspx.vb](./VB/BindAndAddFields/Default.aspx.vb))
 <!-- default file list end -->
 # How to create fields and assign a data source at runtime
 
