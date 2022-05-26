@@ -29,37 +29,36 @@ Namespace BindAndAddFields
 				' create fields
 				Dim fieldEmployee As New PivotGridField()
 				fieldEmployee.ID = "fieldEmployee"
-				fieldEmployee.FieldName = "Employee"
-				fieldEmployee.Area = DevExpress.XtraPivotGrid.PivotArea.ColumnArea
+                fieldEmployee.DataBinding = New DataSourceColumnBinding("Employee")
+                fieldEmployee.Area = DevExpress.XtraPivotGrid.PivotArea.ColumnArea
 				ASPxPivotGrid1.Fields.Add(fieldEmployee)
 
 				Dim fieldCountry As New PivotGridField()
 				fieldCountry.ID = "fieldCountry"
-				fieldCountry.FieldName = "ShipCountry"
-				fieldCountry.Area = DevExpress.XtraPivotGrid.PivotArea.RowArea
+                fieldCountry.DataBinding = New DataSourceColumnBinding("ShipCountry")
+                fieldCountry.Area = DevExpress.XtraPivotGrid.PivotArea.RowArea
 				ASPxPivotGrid1.Fields.Add(fieldCountry)
 
 				Dim fieldCity As New PivotGridField()
 				fieldCity.ID = "fieldCity"
-				fieldCity.FieldName = "ShipCity"
-				fieldCity.Area = DevExpress.XtraPivotGrid.PivotArea.RowArea
+                fieldCity.DataBinding = New DataSourceColumnBinding("ShipCity")
+                fieldCity.Area = DevExpress.XtraPivotGrid.PivotArea.RowArea
 				ASPxPivotGrid1.Fields.Add(fieldCity)
 
 				Dim fieldFreight As New PivotGridField()
 				fieldFreight.ID = "fieldFreight"
-				fieldFreight.FieldName = "Freight"
-				fieldFreight.Area = DevExpress.XtraPivotGrid.PivotArea.DataArea
+                fieldFreight.DataBinding = New DataSourceColumnBinding("Freight")
+                fieldFreight.Area = DevExpress.XtraPivotGrid.PivotArea.DataArea
 				ASPxPivotGrid1.Fields.Add(fieldFreight)
 
 				Dim fieldOrderDate As New PivotGridField()
 				fieldOrderDate.ID = "fieldOrderDate"
-				fieldOrderDate.FieldName = "OrderDate"
-				fieldOrderDate.Area = DevExpress.XtraPivotGrid.PivotArea.FilterArea
+                fieldOrderDate.DataBinding = New DataSourceColumnBinding("OrderDate", DevExpress.XtraPivotGrid.PivotGroupInterval.DateMonth)
+                fieldOrderDate.Area = DevExpress.XtraPivotGrid.PivotArea.FilterArea
 				fieldOrderDate.ValueFormat.FormatType = DevExpress.Utils.FormatType.DateTime
 				fieldOrderDate.ValueFormat.FormatString = "MMM yyyy"
-				fieldOrderDate.GroupInterval = DevExpress.XtraPivotGrid.PivotGroupInterval.DateMonth
-				ASPxPivotGrid1.Fields.Add(fieldOrderDate)
-			End If
+                ASPxPivotGrid1.Fields.Add(fieldOrderDate)
+            End If
 
 			ASPxPivotGrid1.DataSource = dataTable
 			ASPxPivotGrid1.DataBind()
