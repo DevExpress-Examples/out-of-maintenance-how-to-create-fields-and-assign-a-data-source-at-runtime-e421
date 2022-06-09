@@ -9,11 +9,20 @@
 * [Default.aspx](./CS/BindAndAddFields/Default.aspx) (VB: [Default.aspx](./VB/BindAndAddFields/Default.aspx))
 * [Default.aspx.cs](./CS/BindAndAddFields/Default.aspx.cs) (VB: [Default.aspx.vb](./VB/BindAndAddFields/Default.aspx.vb))
 <!-- default file list end -->
-# How to create fields and assign a data source at runtime
+# Pivot Grid for Web Forms - How to create fields and assign a data source at runtime
+
+This example demonstrates how to create and configure [ASPxPivotGrid](https://docs.devexpress.com/AspNet/DevExpress.Web.ASPxPivotGrid.ASPxPivotGrid) fields programmatically. 
 
 
-<p>This example demonstrates how to create and configure ASPxPivotGrid fields programmatically. It also shows how to create and fill a data table, and bind it to the PivotGrid in code behind.</p>
+## Files to Look At
 
-<br/>
+- [Default.aspx](./CS/BindAndAddFields/Default.aspx) (VB: [Default.aspx](./VB/BindAndAddFields/Default.aspx))
+- [Default.aspx.cs](./CS/BindAndAddFields/Default.aspx.cs) (VB: [Default.aspx.vb](./VB/BindAndAddFields/Default.aspx.vb))
+
+## Documentation
+
+- [Fields](https://docs.devexpress.com/AspNet/7259/components/pivot-grid/binding-to-data/unbound-fieldshttps://docs.devexpress.com/AspNet/9464/components/pivot-grid/fundamentals/fields)
+- [Binding to Data Overview](https://docs.devexpress.com/AspNet/7250/components/pivot-grid/binding-to-data)
+
 
 
