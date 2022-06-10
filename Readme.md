@@ -12,6 +12,15 @@
 
 This example demonstrates how to create and configure [ASPxPivotGrid](https://docs.devexpress.com/AspNet/DevExpress.Web.ASPxPivotGrid.ASPxPivotGrid) fields programmatically. 
 
+Create a [PivotGridField](https://docs.devexpress.com/AspNet/DevExpress.Web.ASPxPivotGrid.PivotGridField) instance. Then, set its [DataBinding](https://docs.devexpress.com/CoreLibraries/DevExpress.XtraPivotGrid.PivotGridFieldBase.DataBinding) property to an instance of the [DataSourceColumnBinding](https://docs.devexpress.com/AspNet/DevExpress.Web.ASPxPivotGrid.DataSourceColumnBinding) class to specify a PivotGrid’s field data binding to a data source column.
+```cs
+//...
+PivotGridField fieldEmployee = new PivotGridField();
+fieldEmployee.ID = "fieldEmployee";
+fieldEmployee.DataBinding = new DataSourceColumnBinding("Employee");
+fieldEmployee.Area = DevExpress.XtraPivotGrid.PivotArea.ColumnArea;
+ASPxPivotGrid1.Fields.Add(fieldEmployee);
+```
 
 ## Files to Look At
 
