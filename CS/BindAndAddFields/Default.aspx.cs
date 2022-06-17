@@ -12,18 +12,18 @@ using System.Data.SqlClient;
 using DevExpress.Web.ASPxPivotGrid;
 
 namespace BindAndAddFields {
-
     public partial class _Default : System.Web.UI.Page {
-        private SqlDataSource ds;
-
         protected void Page_Load(object sender, EventArgs e) {
-            ds = new SqlDataSource("System.Data.OleDb", "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=|DataDirectory|\\nwind.mdb",
-                 "SELECT TOP 30 e.LastName AS Employee, o.ShipCountry, " +
+            string connStr = "Data Source=(local);Initial Catalog=Northwind;Integrated Security=true";
+            string query = "SELECT TOP 30 e.LastName AS Employee, o.ShipCountry, " + 
                 "o.ShipCity, o.Freight, o.OrderDate FROM Orders o " +
                 "INNER JOIN Employees e ON o.EmployeeID = e.EmployeeID " +
-                "ORDER BY Freight DESC");
+                "ORDER BY Freight DESC";
+            SqlDataAdapter adapter = new SqlDataAdapter(query, connStr);
+            DataTable dataTable = new DataTable();
+            adapter.Fill(dataTable);
 
-            if (!IsPostBack && !IsCallback) {
+            if(!IsPostBack && !IsCallback) {
                 //ASPxPivotGrid1.DataSource = dataTable;
                 //ASPxPivotGrid1.DataBind();
 
@@ -62,7 +62,7 @@ namespace BindAndAddFields {
                 ASPxPivotGrid1.Fields.Add(fieldOrderDate);
             }
 
-            ASPxPivotGrid1.DataSource = ds;
+            ASPxPivotGrid1.DataSource = dataTable;
             ASPxPivotGrid1.DataBind();
         }
     }
